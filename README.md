@@ -1,6 +1,6 @@
-<p align="center">
-  <img width="300" height="300" alt="deadlock_tweaker" src="https://github.com/user-attachments/assets/f409833b-a7dd-4b93-949d-fffd59533b68" />
-</p>
+
+<img width="3840" height="600" alt="DLT BANNER" src="https://github.com/user-attachments/assets/05060402-9b51-4c42-8982-c1337ca42972" />
+
 
 # RU
 Инструмент для изменения FOV в игре Deadlock. Данная программа 
@@ -23,10 +23,9 @@
 
 <br />
 
-
-
-<img width="3840" height="600" alt="DLT BANNER" src="https://github.com/user-attachments/assets/05060402-9b51-4c42-8982-c1337ca42972" />
-
+<p align="center">
+  <img width="300" height="300" alt="deadlock_tweaker" src="https://github.com/user-attachments/assets/f409833b-a7dd-4b93-949d-fffd59533b68" />
+</p>
 
 # EN
 
