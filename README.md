@@ -24,7 +24,7 @@
 <br />
 
 <p align="center">
-  <img width="300" height="300" alt="deadlock_tweaker" src="https://github.com/user-attachments/assets/f409833b-a7dd-4b93-949d-fffd59533b68" />
+  <img width="250" height="250" alt="deadlock_tweaker" src="https://github.com/user-attachments/assets/f409833b-a7dd-4b93-949d-fffd59533b68" />
 </p>
 
 # EN
