@@ -1,8 +1,6 @@
 ﻿using Microsoft.Win32;
 using Spectre.Console;
 using System.Text.RegularExpressions;
-using System.Resources;
-using System.Globalization;
 
 namespace DeadlockTweaker;
 
@@ -10,7 +8,7 @@ class Program
 {
     static async Task Main(string[] args)
     {
-        Console.Title = "Deadlock-HalfEnglishTranslate";
+        Console.Title = "Deadlock Tweaker";
 
         StarterInfo();
         string deadlockPath = @"C:\Program Files (x86)\Steam\steamapps\common\Deadlockk";
