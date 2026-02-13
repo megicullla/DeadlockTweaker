@@ -100,13 +100,26 @@ class Program
                 string gameinfoPath = deadlockPath + @"\game\citadel\gameinfo.gi";
                 Console.Clear();
                 StarterInfo();
+
+
                 try
                 {
                     int value;
+                    string text = await File.ReadAllTextAsync(gameinfoPath);
+                    var match = Regex.Match(text, "\"r_aspectratio\"\\s+\"([^\"]+)\"");
+                    double calcFov = 0;
+                    if (match.Success)
+                    {
+                        var existFov = match.Groups[1].Value;
+                        calcFov = (double.Parse(existFov) + 1.207) / 0.03708;
+                    }
+                    Console.ForegroundColor = ConsoleColor.Magenta;
+                    Console.WriteLine("FOV: " + (calcFov == 0 ? "none" : Math.Round(calcFov)));
+
 
                     while (true)
                     {
-                        Console.ForegroundColor = ConsoleColor.Magenta;
+                        
                         Console.Write(LangHelper.GetString("Enter_Fov_Number"));
                         string input = Console.ReadLine();
 
@@ -122,7 +135,6 @@ class Program
                     }
 
                     var fovValue = 0.03708 * value - 1.207;
-                    string text = await File.ReadAllTextAsync(gameinfoPath);
 
                     var fovContains = text.Contains("r_aspectratio");
 
