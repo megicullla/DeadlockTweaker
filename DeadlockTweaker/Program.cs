@@ -1,5 +1,6 @@
 ﻿using Microsoft.Win32;
 using Spectre.Console;
+using System.Globalization;
 using System.Text.RegularExpressions;
 
 namespace DeadlockTweaker;
@@ -140,11 +141,11 @@ class Program
 
                     if (fovContains)
                     {
-                        text = Regex.Replace(text, "\\r\\n\\t\\t\"r_aspectratio\"\\s+\"[^\"]*\"", $"\r\n\t\t\"r_aspectratio\" \"{Math.Round(fovValue, 2)}\" ");
+                        text = Regex.Replace(text, "\\r\\n\\t\\t\"r_aspectratio\"\\s+\"[^\"]*\"", $"\r\n\t\t\"r_aspectratio\" \"{Math.Round(fovValue, 2).ToString(CultureInfo.InvariantCulture)}\" ");
                     }
                     else
                     {
-                        text = text.Replace("\tConVars\r\n\t{\t", $"\tConVars\r\n\t{{\t\r\n\t\t\"r_aspectratio\" \"{Math.Round(fovValue, 2)}\" ");
+                        text = text.Replace("\tConVars\r\n\t{\t", $"\tConVars\r\n\t{{\t\r\n\t\t\"r_aspectratio\" \"{Math.Round(fovValue, 2).ToString(CultureInfo.InvariantCulture)}\" ");
                     }
                     await File.WriteAllTextAsync(gameinfoPath, text);
                     Console.Clear();
