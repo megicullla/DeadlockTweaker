@@ -12,7 +12,7 @@ class Program
         Console.Title = "Deadlock Tweaker";
 
         StarterInfo();
-        string deadlockPath = @"C:\Program Files (x86)\Steam\steamapps\common\Deadlockk";
+        string deadlockPath = @"C:\Program Files (x86)\Steam\steamapps\common\Deadlock";
         bool deadlockExists = true;
         string[] actions = ["1", "2"];
         string[] language_actions = ["1", "2"];
@@ -112,7 +112,7 @@ class Program
                     if (match.Success)
                     {
                         var existFov = match.Groups[1].Value;
-                        calcFov = (double.Parse(existFov) + 1.207) / 0.03708;
+                        calcFov = (Double.Parse(existFov.Replace(',', '.'), CultureInfo.InvariantCulture) + 1.207) / 0.03708;
                     }
                     Console.ForegroundColor = ConsoleColor.Magenta;
                     Console.WriteLine("FOV: " + (calcFov == 0 ? "none" : Math.Round(calcFov)));
@@ -141,11 +141,11 @@ class Program
 
                     if (fovContains)
                     {
-                        text = Regex.Replace(text, "\\r\\n\\t\\t\"r_aspectratio\"\\s+\"[^\"]*\"", $"\r\n\t\t\"r_aspectratio\" \"{Math.Round(fovValue, 2).ToString(CultureInfo.InvariantCulture)}\" ");
+                        text = Regex.Replace(text, "\\r\\n\\t\\t\"r_aspectratio\"\\s+\"[^\"]*\"", $"\r\n\t\t\"r_aspectratio\" \"{Math.Round(fovValue, 2).ToString(CultureInfo.InvariantCulture).Replace(",", ".")}\" ");
                     }
                     else
                     {
-                        text = text.Replace("\tConVars\r\n\t{\t", $"\tConVars\r\n\t{{\t\r\n\t\t\"r_aspectratio\" \"{Math.Round(fovValue, 2).ToString(CultureInfo.InvariantCulture)}\" ");
+                        text = text.Replace("\tConVars\r\n\t{\t", $"\tConVars\r\n\t{{\t\r\n\t\t\"r_aspectratio\" \"{Math.Round(fovValue, 2).ToString(CultureInfo.InvariantCulture).Replace(",", ".")}\" ");
                     }
                     await File.WriteAllTextAsync(gameinfoPath, text);
                     Console.Clear();
