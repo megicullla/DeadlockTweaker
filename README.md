@@ -13,7 +13,7 @@
 
 ## Как пользоваться
 
-1. [Скачать]([https://github.com/megicullla/DeadlockTweaker/releases](https://dotnet.microsoft.com/ru-ru/download/dotnet/thank-you/sdk-8.0.418-windows-x64-installer)) и запустить .NET 8
+1. [Скачать](https://dotnet.microsoft.com/ru-ru/download/dotnet/thank-you/sdk-8.0.418-windows-x64-installer) и запустить .NET 8
 2. [Скачать](https://github.com/megicullla/DeadlockTweaker/releases) и запустить DLTweaker.exe
 3. Выбрать нужное действие (ввести 1-2)
 <br />
