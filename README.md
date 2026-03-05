@@ -13,7 +13,7 @@
 
 ## Как пользоваться
 
-1. [Скачать](https://dotnet.microsoft.com/ru-ru/download/dotnet/thank-you/sdk-8.0.418-windows-x64-installer) и запустить .NET 8
+1. [Скачать](https://dotnet.microsoft.com/ru-ru/download/dotnet/thank-you/sdk-8.0.418-windows-x64-installer) и установить .NET 8
 2. [Скачать](https://github.com/megicullla/DeadlockTweaker/releases) и запустить DLTweaker.exe
 3. Выбрать нужное действие (ввести 1-2)
 <br />
@@ -39,7 +39,7 @@ A tool for changing the FOV in the game Deadlock. This program modifies FOV valu
 
 ## How to use
 
-1. [Download](https://dotnet.microsoft.com/ru-ru/download/dotnet/thank-you/sdk-8.0.418-windows-x64-installer) and run .NET 8
+1. [Download](https://dotnet.microsoft.com/ru-ru/download/dotnet/thank-you/sdk-8.0.418-windows-x64-installer) and install .NET 8
 2. [Download](https://github.com/megicullla/DeadlockTweaker/releases) and run DLTweaker.exe
 3. Select the desired action (enter 1–2)
 
